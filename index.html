@@ -19,19 +19,147 @@
   .hover-zoom:hover {
     transform: scale(1.05);
   }
+  /* Make the scrollbar thinner and change colors */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track (the background) */
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 10px;
+}
+
+/* Handle (the moving part) */
+::-webkit-scrollbar-thumb {
+  background: #DC3545;
+  border-radius: 10px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #186FB1;
+}
+.active {
+ background-color: rgba(255, 255, 255, 0.226);
+}
+
+.hover-default:hover {
+ background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.hide-scroll {
+  display: none;
+}
+
+
+/* Media Queries */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2rem !important;
+  }
+  .d-flex.justify-content-start.fs-4.w-50 {
+    width: 100% !important;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .hover-zoom {
+    width: 120px !important;
+    border-width: 4px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100% !important;
+    padding: 0 15px !important;
+  }
+  .navbar-nav {
+    text-align: center !important;
+  }
+  .nav-item {
+    margin-bottom: 10px !important;
+  }
+  .d-flex.justify-content-start {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .btn {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+  .card-img-top {
+    height: auto !important;
+  }
+  .card-body {
+    padding: 1rem !important;
+  }
+  .card-title {
+    font-size: 1.5rem !important;
+  }
+  .card-text {
+    font-size: 1rem !important;
+  }
+  .btn-lg {
+    font-size: 1rem !important;
+  }
+  .accordion-button {
+    font-size: 1.2rem !important;
+    padding: 1rem !important;
+  }
+  .accordion-body {
+    font-size: 1rem !important;
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px !important;
+  }
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+  .fs-1 {
+    font-size: 1.2rem !important;
+  }
+  .fs-3 {
+    font-size: 1rem !important;
+  }
+  .d-flex.justify-content-center {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .card {
+    margin-bottom: 20px !important;
+  }
+  header h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+  #thescroll {
+    font-size: 2rem !important;
+  }
+}
+
+
 </style>
 
+
   </head>
-  <body style="height: 100vh">
-    <header style="height: 100%; background-color: aqua">
+  <body class="text-warning" style="width: 100%; background-color: #000000; " id="home">
+    <div style="width: 100%; height: 100%; ">
+    <header style=" background-color: transparent">
       <!-- navbar -->
-      <div class="bg-danger" style="height: 15%;">
+      <div class="bg-danger" >
         <!-- top nav -->
-        <div style="height: 30%">
+        <div style=>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
               <a class="navbar-brand" href="#"
-                ><i class="bi bi-envelope m-2"></i>TADROS KARAM</a
+                ><i class="bi bi-envelope m-2" ></i>TADROS KARAM</a
               >
               <button
                 class="navbar-toggler"
@@ -66,25 +194,25 @@
           </nav>
         </div>
         <!-- bottom nav -->
-        <div style="height: 70%; background-color: black">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-danger h-100">
+        <div style=" background-color: rgb(96, 24, 212)">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-danger ">
   <div class="container bg-danger fs-3" >
-    <a class="navbar-brand fs-2 bg-white text-danger p-3" href="#">SUMMER TRAINING PROJECT COLLECTION</a>
+    <a class="navbar-brand fs-3 text-white p-3" href="#">SUMMER TRAINING PROJECT COLLECTION</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div  id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">NA1</a>
+        <li class="nav-item list">
+          <a class="nav-link hover-default active def" aria-current="page" href="#" >Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">NA2</a>
+        <li class="nav-item list">
+          <a class="nav-link hover-default" href="#projects">View projects</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">NA3</a>
+        <li class="nav-item list">
+          <a class="nav-link hover-default" href="#vision" >My Career Vision</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown list">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -105,18 +233,18 @@
       <div
         class="d-flex align-items-center"
         style="
-          height: 85%;
+          
           background: linear-gradient(135deg, #4385e7, #051663a9);
         "
       >
         <div class="container w-50">
             <div class="container w-75">
-          <h1 style="font-size: 50px; font-weight: bold; ">
+          <h1 style="font-size: 30px; font-weight: bold; ">
             Hi this is my <span class="btn-danger">NTI</span> 's summer
             training full-stack program project collection
           </h1>
-          <p class="fs-3 text-white">
-           This summer training has been beneficial to me <br> I recommend this course to cs students
+          <p class="fs-3 text-dark">
+           This summer training has been beneficial to me <br> Thanks to NTI for this free amazing opportunity 
           </p>
           <div class="d-flex justify-content-start fs-4 w-50 gap-4">
             <button class="btn-outline-light border border-dark" style="width: 120px;">
@@ -145,37 +273,39 @@
           </div>
         </div>
         </div>
-        <div class="container w-100 d-flex justify-content-center"><a href="https://www.linkedin.com/school/national-telecommunication-institute/posts/?feedView=all" target="_blank"><img src="https://www.nti.sci.eg/images/logo.png" class="img-fluid bg-white p-2 hover-zoom" ></a></div>
+        <div class="container d-flex justify-content-center"><a href="https://www.linkedin.com/school/national-telecommunication-institute/posts/?feedView=all" target="_blank"><img src="https://www.nti.sci.eg/images/logo.png" class=" bg-white p-2 hover-zoom" ></a></div>
       </div>
       
     </header>
 
-<main style="height: 100vh;">
+<main >
+  <div><button class="btn btn-outline-light mode" >Dark</button></div>
+  
     
   <!-- Projects Done Title -->
-  <div class="d-flex justify-content-center align-items-center py-5">
-    <p class="fs-1">This what was done so far in this section i will add all the projects here when i am done with the course</p>
+  <div class="d-flex justify-content-center align-items-center py-5 text-center" id="projects">
+    <p class="fs-1">This what was done so far <br> in this section i will add all the tasks / projects by the course</p>
   </div>
   
   <!-- Projects Section Wrapper -->
   <div style="
     width: 100%;
-    background: linear-gradient(135deg, #ffe600, #d0ff00);
+   margin-bottom: 50px;
     padding: 80px 0;
     margin-top: -20px;
   ">
     <!-- Centered Cards Row -->
     <div class="container">
-      <div class="row justify-content-center g-4">
+      <div class="row justify-content-center g-5">
         <!-- Task 1 -->
         <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card border border-dark shadow-sm h-100">
-            <div style="height: 200px; overflow: hidden;">
+          <div class="card border border-dark shadow-sm h-100 ">
+            <div style=" overflow: hidden;" >
               <img src="Task1.png" class="card-img-top w-100 h-100" alt="Task 1" style="object-fit: cover;">
             </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title fs-1 mb-3">TASK 1</h5>
-              <p class="card-text fs-5 flex-grow-1">
+              <p class="card-text fs-5 flex-grow-1 ">
                 Cloning a page from scratch and making it responsive across all screens
               </p>
               <a href="https://tadroskaram.github.io/nti-clone-task1/" class="btn btn-warning btn-lg mt-auto" target="_blank">Visit Live</a>
@@ -186,7 +316,7 @@
         <!-- Task 2 -->
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card border border-dark shadow-sm h-100">
-            <div style="height: 200px; overflow: hidden;">
+            <div style=" overflow: hidden;">
               <img src="Task2.png" class="card-img-top w-100 h-100" alt="Task 2" style="object-fit: cover;">
             </div>
             <div class="card-body d-flex flex-column">
@@ -202,17 +332,15 @@
         <!-- Task 3 -->
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card border border-dark shadow-sm h-100">
-            <div style="height: 200px; overflow: hidden;">
+            <div style=" overflow: hidden;">
               <img src="task3.png" class="card-img-top w-100 h-100" alt="Task 3" style="object-fit: cover;">
             </div>
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title fs-1 mb-3">CURRENT</h5>
+              <h5 class="card-title fs-1 mb-3">TASK 3 "CURRENT"</h5>
               <p class="card-text fs-5 flex-grow-1">
-               Combine the learning outcomes in the first week <br>
-               - Coded a page from scratch <br>
-               - Used bootstrap css framework <br>
-               - Added some JavaScript <a href="script.js" class="btn btn-warning">view it</a> 
+                Using bootstrap and js together <br><br><a class="btn btn-danger btn-lg mt-auto" href="script.js">view js file</a>
               </p>
+               <button class="btn btn-warning btn-lg mt-auto viewf" >View Features</button>
               
             </div>
           </div>
@@ -221,14 +349,14 @@
     </div>
   </div>
   <!-- Projects Done Title -->
-  <div class="d-flex justify-content-center align-items-center py-5">
-    <p class="fs-1">Current & Future Skills / Goals</p>
+  <div class="d-flex justify-content-center align-items-center ">
+    <p class="fs-1" id="vision">Current , Future Skills & Goals</p>
   </div>
   
  <div style="
     width: 100%;
-    height: 700px;
-    background: linear-gradient(135deg, #ff00aa, #5900ff);
+    
+    
     padding: 80px 20px;
     margin-top: -20px;
     box-sizing: border-box;
@@ -237,12 +365,12 @@
     <div class="accordion" id="accordionExample" style="max-width: 100%; margin: 0 auto;">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size: 1.25rem; padding: 1.5rem;">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size: 2rem; padding: 1.5rem;">
             Future Skills
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="font-size: 1.1rem; padding: 2rem;">
+          <div class="accordion-body" style="color: #000000; font-size: 1.5rem; padding: 2rem;">
           <p>In this NTI course I will be learning full-stack web development which will strength in my front end skills and back-end skills i will learn PHP and it's framework larval after the course is finished i will also take node.js course so in total i will have 3 back-end languages and also the course will teach me 1 data base language which is MySQL super excited and eger to learn :)
 
             <br><br>also firstly before node.js after finishing this course i will do react as js frontend framework
@@ -254,12 +382,12 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size: 1.25rem; padding: 1.5rem;">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size: 2rem; padding: 1.5rem;">
             Current
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="font-size: 1.1rem; padding: 2rem;">
+          <div class="accordion-body" style="color: #000000; font-size: 1.5rem; padding: 2rem;">
           <p>I don't know where to start i have a tested most this github read me summaries it most</p>
           <img src="lang.png">
           </div>
@@ -267,12 +395,12 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-size: 1.25rem; padding: 1.5rem;">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-size: 2rem; padding: 1.5rem;">
             Goals
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="font-size: 1.1rem; padding: 2rem;">
+          <div class="accordion-body" style="color: #000000; font-size: 1.5rem; padding: 2rem;">
     <p>Currently i am still an engineering undergraduate so i am testing around different things and fields and languages to find out what is the best field and language for me</p>
           </div>
         </div>
@@ -280,10 +408,28 @@
     </div>
   </div>
 </div>
-  </div>
+
 </main>
+<button
+  id="thescroll"
+  class="hide-scroll"
+  style="
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 80px;
+    z-index: 999;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  "
+  title="Back to top"
+>
+ <a href="#home" style="text-decoration: none;">⬆️</a> 
+</button>
+</div>
 
-
+<script src="script.js" ></script>
     <script src="popper.min.js"></script>
     <script src="bootstrap.js"></script>
   </body>
