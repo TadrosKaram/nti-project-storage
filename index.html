@@ -54,95 +54,26 @@
   display: none;
 }
 
+/* 
+@media (min-width : 425px){
 
-/* Media Queries */
-@media (max-width: 992px) {
-  header h1 {
-    font-size: 2rem !important;
+  .img {
+    width: 10px;
   }
-  .d-flex.justify-content-start.fs-4.w-50 {
-    width: 100% !important;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .hover-zoom {
-    width: 120px !important;
-    border-width: 4px !important;
-  }
-}
 
-@media (max-width: 768px) {
-  .container {
-    width: 100% !important;
-    padding: 0 15px !important;
-  }
-  .navbar-nav {
-    text-align: center !important;
-  }
-  .nav-item {
-    margin-bottom: 10px !important;
-  }
-  .d-flex.justify-content-start {
-    justify-content: center !important;
-    width: 100% !important;
-  }
-  .btn {
-    width: 100% !important;
-    margin-bottom: 10px !important;
-  }
-  .card-img-top {
-    height: auto !important;
-  }
-  .card-body {
-    padding: 1rem !important;
-  }
-  .card-title {
-    font-size: 1.5rem !important;
-  }
-  .card-text {
-    font-size: 1rem !important;
-  }
-  .btn-lg {
-    font-size: 1rem !important;
-  }
-  .accordion-button {
-    font-size: 1.2rem !important;
-    padding: 1rem !important;
-  }
-  .accordion-body {
-    font-size: 1rem !important;
-    padding: 1rem !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding: 0 10px !important;
-  }
-  .navbar-brand {
-    font-size: 1.2rem !important;
-  }
-  .fs-1 {
-    font-size: 1.2rem !important;
-  }
-  .fs-3 {
-    font-size: 1rem !important;
-  }
-  .d-flex.justify-content-center {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  .card {
-    margin-bottom: 20px !important;
-  }
-  header h1 {
-    font-size: 1.5rem !important;
-    line-height: 1.2 !important;
-  }
-  #thescroll {
-    font-size: 2rem !important;
-  }
-}
+} */
+    .circle {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #FFC107;
+      border-radius: 50%;
+      pointer-events: none; /* So it doesn't block clicks */
+      transform: translate(-50%, -50%);
+      transition: top 0.01s, left 0.01s; /* smooth follow */
+      z-index: 999; 
+      /* so its always on top*/
+    }
 
 
 </style>
@@ -150,6 +81,10 @@
 
   </head>
   <body class="text-warning" style="width: 100%; background-color: #000000; " id="home">
+
+    <!-- pointer effect -->
+     <div class="circle" id="mouseCircle"></div>
+
     <div style="width: 100%; height: 100%; ">
     <header style=" background-color: transparent">
       <!-- navbar -->
@@ -273,7 +208,7 @@
           </div>
         </div>
         </div>
-        <div class="container d-flex justify-content-center"><a href="https://www.linkedin.com/school/national-telecommunication-institute/posts/?feedView=all" target="_blank"><img src="https://www.nti.sci.eg/images/logo.png" class=" bg-white p-2 hover-zoom" ></a></div>
+        <div class="container d-flex justify-content-center"><a href="https://www.linkedin.com/school/national-telecommunication-institute/posts/?feedView=all" target="_blank"><img src="https://www.nti.sci.eg/images/logo.png" class=" bg-white p-2 hover-zoom image" ></a></div>
       </div>
       
     </header>

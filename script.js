@@ -67,3 +67,14 @@ mode.addEventListener("click", function () {
     isDark = true;
   }
 });
+
+//////////////////////////////////////////////////
+
+//Pointer effect
+
+const circle = document.querySelector("#mouseCircle");
+
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = `${e.clientX}px`;
+  circle.style.top = `${e.clientY}px`;
+});
