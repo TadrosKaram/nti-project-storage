@@ -1,0 +1,42 @@
+@media (max-width: 768px) {
+  .image {
+    width: 150px !important;
+    margin-top: 20px;
+  }
+  .photo-area {
+    display: block !important;
+  }
+  .hero-title {
+    font-size: 20px !important;
+    width: 100% !important;
+  }
+  .hero-para {
+    font-size: 10px !important;
+  }
+  .hero-btns {
+    gap: 0px !important;
+    width: 10% !important;
+    display: block !important;
+  }
+  .cards-section {
+    width: 20px !important;
+  }
+  .nav-section {
+    width: auto !important;
+  }
+  .cards-title {
+    font-size: 8px !important;
+  }
+  .accordin-title {
+    font-size: 30px !important;
+  }
+  #thescroll {
+    display: hidden;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-section {
+    width: 400px !important;
+  }
+}
